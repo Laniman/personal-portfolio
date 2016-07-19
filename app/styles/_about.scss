@@ -1,0 +1,86 @@
+.about-wrapper{
+  display: flex;
+  justify-content: space-between;
+  @include media(max-width $phone) {
+    flex-direction: column;
+  }
+}
+
+.about-wrapper__left{
+  width: 48%;
+  @include media(max-width $phone) {
+    width: 100%;
+  }
+
+
+  p:last-child{
+    margin-bottom: 0;
+    @include media(max-width $phone) {
+      display: none;
+    }
+  }
+}
+
+.about-main{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.about-image {
+  overflow: hidden;
+  width: 45%;
+  display: flex;
+  justify-content: flex-end;
+  border: 4px solid $border-color;
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.about-list{
+  width: 45%;
+  display: flex;
+  justify-content: flex-start;
+
+  li{
+    margin-bottom: 10px;
+  }
+}
+
+.about-wrapper__right{
+  width: 48%;
+  @include media(max-width $phone) {
+    width: 100%;
+  }
+
+  p{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    @include media(max-width $phone) {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+  }
+  p:nth-last-child(2){
+    @include media(max-width $desktop) {
+      border-bottom: 0;
+    }
+  }
+
+  p:last-child{
+    margin-bottom: 0;
+    border-bottom: none;
+    @include media(max-width $desktop) {
+      display: none;
+    }
+  }
+}
+
+
+
+

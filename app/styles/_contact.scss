@@ -1,0 +1,86 @@
+.contact-form {
+  //margin-top: 40px;
+
+  input, textarea, button {
+    width: 100%;
+    outline: 0;
+    border: 1px solid darken($border-color, 20%);
+    padding: 12px;
+    color: $light-color;
+    margin-bottom: 30px;
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  .button {
+    width: auto;
+    background: $dark-bg;
+    color: $white;
+    text-transform: uppercase;
+    border: 0;
+    position: relative;
+    transition: all 0.5s 0ms;
+
+    transform-style: preserve-3d;
+
+    &:after,
+    &:before{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      line-height: 48px;
+    }
+
+    &:before{
+      top: 100%;
+      background: #e96a6a;
+      color: #a33a3a;
+      content: 'Ошибка!';
+      transform-origin: 0% 0%;
+      transform: rotateX(-90deg);
+    }
+
+    &:after{
+      top: -98%;
+      background: #7aca7c;
+      color: #358337;
+      content: 'Отправлено!';
+      transform-origin: 0% 100%;
+      transform: rotateX(90deg);
+    }
+  }
+
+}
+
+.button-success3d{
+  transform-origin: 50% 100%;
+  transform: rotateX(-90deg) translateY(100%);
+  background: #aaa;
+}
+
+.button-error3d{
+  transform-origin: 50% 0%;
+  transform: rotateX(90deg) translateY(-100%);
+  background: #aaa;
+}
+
+.submit{
+  display: inline-block;
+  position: relative;
+
+  button{
+    margin-bottom: 0;
+  }
+}
+
+#ajaxLoader{
+  position:absolute;
+  top: 50%;
+  left: 110%;
+  transform: translate(0%, -50%);
+  z-index:1000;
+  display:none;
+}
+
